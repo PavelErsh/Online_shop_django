@@ -1,6 +1,7 @@
 from django.shortcuts import render
+from core.models import Item
 
 # Create your views here.
 def main(request):
-    var = "hello"
-    return render(request, 'main.html', {'var':var})
+    items = Item.objects.all()
+    return render(request, 'main.html', {'items':items})
