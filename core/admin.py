@@ -6,7 +6,7 @@ from core.models import Item
 
 class ItemAdmin(admin.ModelAdmin):
     list_display = ('name', 'color', 'price')
-    list_dialects = ('name', 'price')
+    #list_editable = ('name', 'price')
     search_fields = ('name', 'color', 'price')
 
 
